@@ -20,10 +20,14 @@ livros = [
     }
 ]
 
+#consultar livros cadastrados
 
 @app.route('/livros', methods=['GET'])
 def obter_livros():
     return jsonify(livros), 200
+
+
+#consultar livro pela ID
 
 @app.route('/livros/<int:id>', methods=['GET'])
 def obter_livro_por_id(id):
@@ -31,6 +35,8 @@ def obter_livro_por_id(id):
         if livro.get('id') == id:
             return jsonify(livro), 200
     return jsonify({'mensagem': 'Livro não encontrado'}), 404
+
+#editar livro pela ID
 
 @app.route('/livros/<int:id>', methods=['PUT'])
 def editar_livro_por_id(id):
@@ -40,6 +46,8 @@ def editar_livro_por_id(id):
             livros[indice].update(livro_alterado)
             return jsonify(livros[indice]), 200
     return jsonify({'mensagem': 'Livro não encontrado'}), 404
+
+#criar novo livro
 
 @app.route('/livros', methods=['POST'])
 def criar_novo_livro():
@@ -52,6 +60,7 @@ def criar_novo_livro():
     return jsonify({'mensagem': 'Livro Cadastrado com sucesso'}), 200
     return jsonify(novo_livro), 201 
     
+#excluir livro pela ID
 
 @app.route('/livros/<int:id>', methods=['DELETE'])
 def excluir_livro(id):
