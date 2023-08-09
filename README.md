@@ -1,6 +1,6 @@
 # APYLivros
 
-APYLivros é uma API simples de gerenciamento de livros, construída com Python e Flask.
+
 
 ## Visão geral
 
@@ -14,6 +14,16 @@ APYLivros é uma API que permite visualizar, adicionar, editar e excluir informa
 - Editar informações de um livro existente com base no seu ID.
 - Excluir um livro da lista com base no seu ID.
 
+## Tecnologias Utilizadas
+
+- Python
+- Flask
+
+## Pré-requisitos
+
+- Python 3.x
+- Flask (instalado automaticamente ao seguir as etapas de instalação)
+
 ## Instalação
 
 1. Certifique-se de ter o Python instalado (versão 3.6 ou superior).
@@ -23,8 +33,6 @@ APYLivros é uma API que permite visualizar, adicionar, editar e excluir informa
 ```markdown
 pip install -r requirements.txt
 ```
-
-
 
 ## Exemplos de uso
 
@@ -69,8 +77,22 @@ DELETE /livros/{id}
 Substitua `{id}` pelo ID numérico do livro que deseja excluir.
 
 
-## Pré-requisitos
+## Documentação da API
 
-- Python 3.x
-- Flask (instalado automaticamente ao seguir as etapas de instalação)
+Para informações detalhadas sobre as rotas e parâmetros da API, consulte a [documentação da API](API_DOCUMENTATION.md).
+
+
+## Status do Desenvolvimento
+
+Este projeto está em desenvolvimento ativo.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
